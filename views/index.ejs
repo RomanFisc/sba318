@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="../public/styles.css"> 
+</head>
+<body>
+  <h1>Todo List</h1>
+  
+  <form action="/addTask" method="POST">
+    <input type="text" name="task" placeholder="Enter a task" id="textForm">
+    <button type="submit" id="formButton">Add Task</button>
+  </form>
+  
+  <hr>
+  
+  <ul>
+    <% tasks.forEach((task, index) => { %>
+      <li>
+        <%= task %>
+        <a href="/deleteTask/<%= index %>" onclick="return confirm('Are you sure you want to delete this task?')">Delete</a>
+      </li>
+    <% }); %>
+  </ul>
+
+</body>
+</html>
