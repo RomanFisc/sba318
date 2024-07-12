@@ -53,7 +53,7 @@ app.delete('/tasks/:id', (req, res) => {
   res.sendStatus(204); 
 });
 
-// Error handling middleware
+//error middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).render('error', { message: 'Something broke!' });
@@ -63,7 +63,8 @@ app.get('/', (req, res) => {
   res.render('index', { tasks: tasks });
 });
 
-// Start server
+
+
 app.listen(port, () => {
   console.log(`Todo List app listening at http://localhost:${port}`);
 });
