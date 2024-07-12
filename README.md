@@ -7,4 +7,7 @@
 # - Express
 # - EJS
 #
+# Usage
+# - When using the application, make sure to refresh the page to see the todo list populated.
+#
 # This was an educational project for PerScholas
